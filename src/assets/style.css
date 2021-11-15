@@ -1,0 +1,208 @@
+:root{
+    --primary-clr: #0c6ff0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    height: 55px;
+    background-color: var(--primary-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+}
+.logo{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.nav-links a{
+    opacity: .9;
+    font-size: .9em;
+    margin-left: .75em;
+    text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active{
+    opacity: 1;
+    text-decoration: underline;
+}
+.nav-links .btn{
+    background-color: #fff;
+    margin-left: .75em;
+    color: var(--primary-clr);
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding: .5em .7em;
+    border-radius: 3px;
+    background-color: var(--primary-clr);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+.btn i{
+    margin-right: .5em;
+}
+.btn.delete{
+    color:rgb(223, 16, 16);
+    background-color:rgb(255, 202, 202);
+}
+.btn.add{
+    background-color: var(--primary-clr);
+    color: #fff;
+    padding: .75em 1em;
+}
+.btn.cancel{
+    background-color: rgb(6, 185, 6);
+    color: #fff;
+    padding: .75em 1em;
+}
+.text-center{
+    text-align: center;
+}
+
+.msg{
+    color: rgb(143, 143, 143);
+    text-align: center;
+}
+
+.boards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.board{
+    padding: 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+    border-top: 3px solid red;
+    border-radius: 4px;
+}
+
+.board .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+}
+.head .title{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.fa-trash{
+    color: rgb(223, 16, 16);
+    margin-left: .74em;
+    cursor: pointer;
+}
+
+.item{
+    padding: 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+.item .head .priority{
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+}
+.badge{
+    padding: .3em .75em;
+    background-color: red;
+    border-radius: 3px;
+    margin-left: .5em;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+    font-size: .8em;
+    letter-spacing: 1px;;
+}
+.fa-sort{
+    cursor: move;
+}
+.item .title{
+
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(48, 47, 47);
+}
+
+.text-right{
+    text-align: right;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.modal .content{
+    padding: 1.5em;
+    background-color: #fff;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+.content .title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.form{
+    margin: 1em 0;
+}
+.form label, .form input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+input{
+    padding: .5em;
+    border-radius: 3px;
+    margin-bottom: .75em;
+}
+input[type="color"]{
+    padding: .1em .5em;
+}
+label{
+    margin-bottom: .3em;
+}
+
+.list-move{
+    transition: .3s;
+}
+
+.container{
+    padding: 0 10vw;
+}
+.main{
+    margin: 1.5em 0;
+}
+
+@media screen and (max-width: 1000px){
+    .container{
+        padding: 0 6vw;
+    }
+}
+@media screen and (max-width: 650px){
+    .container{
+        padding: 0 3vw;
+    }
+}
